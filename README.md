@@ -2,7 +2,7 @@
 
 The Spectre security vulnerability paper from Kocher et al.: [Spectre Attacks: Exploiting Speculative Execution](https://spectreattack.com/spectre.pdf).
 
-In section 4.2, Kocher et al. describe an example implementation in C. Which is also included in Appendix A in the paper. The code included here is equal to the code from the paper in exception of a few fixes to make it work in my environment. 
+In section 4.2, Kocher et al. describe an example implementation in C. Which is also included in Appendix A in the paper. The code included here is equal to the code from the paper in exception of a few fixes to make it work in my environment. Note: I'm definitely not the only one who's done this. [Here's someone else](https://gist.github.com/ErikAugust/724d4a969fb2c6ae1bbd7b2a9e3d4bb6)
 
 ### What am I using?
 CPU: [i5-6267U](https://ark.intel.com/products/91166/Intel-Core-i5-6267U-Processor-4M-Cache-up-to-3_30-GHz)
