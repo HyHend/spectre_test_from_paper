@@ -22,7 +22,7 @@ Then run:
 
 ### Results:
 After running, you'll probably see the following. This basically shows my version of MacOS in combination with my CPU are still vulnerable (2018/01/09). Hopefully, the vulnerability has been fixed when you're trying, and the results look very different. (Note: It shows spectre has, at least in part, not been "succesfully" patched because the "secret" message "The Magic Words are Squeamish Ossifrage." has been read.)
-<img src="https://github.com/HyHend/spectre_test_from_paper/blob/master/img/screenshot.png" width="600px" alt="Screenshot">
+<img src="https://github.com/HyHend/spectre_test_from_paper/blob/master/screenshot.png" width="600px" alt="Screenshot">
 
 ### Concequences:
 Spectre is an issue resulting in very low level hardware design decisions and might not be fixable in existing hardware. Patches from CPU manufacturers could include changes in each CPU's [opcode](https://en.wikipedia.org/wiki/Opcode) set. Possibly disallowing operations which could lead to the misuse of branch prediction and speculalive execution. Misuse of vulnerabilities can also be prevented on an operating system, compiler and/or even application level (Browsers, for example). 
